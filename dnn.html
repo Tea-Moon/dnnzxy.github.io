@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>告白</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+  }
+  p {
+    color: #666;
+  }
+  #heart {
+    font-size: 100px;
+    color: red;
+    margin-top: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #d64888;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>楠楠...</h1>
+  <p>我有一件特别重要的事情想对你说...</p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <i class="fas fa-heart" id="heart"></i>
+  <p>你愿意做我的女朋友吗？</p>
+  <button onclick="confess()">我愿意</button>
+</div>
+
+<script>
+  function confess() {
+    // 记录时间
+    var now = new Date();
+    localStorage.setItem('startDate', now);
+    // 跳转到另一个页面
+    window.location.href = 'celebration.html';
+  }
+</script>
+</body>
+</html>
