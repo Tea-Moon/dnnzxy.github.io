@@ -45,6 +45,9 @@
     background-color: #d64888;
   }
 </style>
+<audio id="bgMusic">
+  <source src="./music/将故事写成我们.mp3" type="audio/mpeg">
+</audio>
 </head>
 <body>
 <div class="container">
@@ -61,14 +64,23 @@
   <button onclick="confess()">我愿意</button>
 </div>
 
+
+
 <script>
-  function confess() {
-    // 记录时间
-    var now = new Date();
-    localStorage.setItem('startDate', now);
-    // 跳转到另一个页面
-    window.location.href = 'celebration.html';
-  }
+// 当页面加载完成后触发播放音频
+window.onload = function() {
+  var audio = document.getElementById('bgMusic');
+  audio.play();
+};
+
+// 告白函数
+function confess() {
+  // 记录时间
+  var now = new Date();
+  localStorage.setItem('startDate', now);
+  // 跳转到另一个页面
+  window.location.href = 'celebration.html';
+}
 </script>
 </body>
 </html>
